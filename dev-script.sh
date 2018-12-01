@@ -60,7 +60,7 @@ function install_ssrpanel(){
 	if [ "$fileinfo" == "$GIT" ];then
 		Download='https://raw.githubusercontent.com/fearlessshi/ssrpanelfork/master'
 	else
-		Download='https://raw.githubusercontent.com/fearlessshi/ssrpanelfork/master''
+		Download='https://raw.githubusercontent.com/fearlessshi/ssrpanelfork/master'
 	fi
 	rm -f ping.pl	
 	wget -c --no-check-certificate "${Download}/lnmp1.5.zip" && unzip lnmp1.5.zip && rm -rf lnmp1.5.zip && cd lnmp1.5 && chmod +x install.sh && ./install.sh

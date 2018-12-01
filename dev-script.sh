@@ -58,9 +58,9 @@ function install_ssrpanel(){
 	echo "$MY_PING $MY" >> ping.pl
 	fileinfo=`sort -V ping.pl|sed -n '1p'|awk '{print $2}'`
 	if [ "$fileinfo" == "$GIT" ];then
-		Download='https://raw.githubusercontent.com/marisn2017/ssrpanel/master'
+		Download='https://raw.githubusercontent.com/fearlessshi/ssrpanelfork/master'
 	else
-		Download='https://coding.net/u/marisn/p/ssrpanel/git/raw/master'
+		Download='https://raw.githubusercontent.com/fearlessshi/ssrpanelfork/master''
 	fi
 	rm -f ping.pl	
 	wget -c --no-check-certificate "${Download}/lnmp1.5.zip" && unzip lnmp1.5.zip && rm -rf lnmp1.5.zip && cd lnmp1.5 && chmod +x install.sh && ./install.sh
